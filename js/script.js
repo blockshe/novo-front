@@ -1,5 +1,5 @@
 
-// BOTÃO VEJA MAIS - PROJETOS
+// BOTÃO VEJA MAIS - PARCEIRO
 const ButtonSeeMore = document.getElementById('see-more')
 const hideDiv = document.getElementById('hide-content')
 
