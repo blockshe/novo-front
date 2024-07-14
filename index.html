@@ -42,6 +42,8 @@
         </div>
         <div class="container-home">
             <article>
+
+                
                 
                 <h1 data-aos="fade-left">Seja uma líder<span>!</span></h1>
                     <p>Junte-se à revolução tecnológica liderada por mulheres</p>
@@ -86,31 +88,68 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+            <form class="row g-3 needs-validation" class="row" novalidate>
+                <div class="col-md-12">
+                    <label for="nome" class="form-label">Nome completo</label>
+                    <input type="text" class="form-control" id="nome" required>
+                    <div class="invalid-feedback">Campo obrigatório.</div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">Campo obrigatório. Email deve conter @.</div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" pattern=".{8,15}" required>
+                    <div class="invalid-feedback">Sua senha deve ter entre 8 e 15 caracteres.</div>
+                  </div>
+
+                 <div class="col-md-6">
+                    <label for="birthdate" class="form-label">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                    <div class="invalid-feedback" id="birthdateError">Campo obrigatório. Você deve ser maior de 18 anos</div>
+                 </div>
 
 
-           
-          pipipipopopo
+                <div class="container mt-5">
+                    <div class="form-group" required>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="empreendedora" value="empreendedora" checked>
+                            <label class="form-check-label" for="empreendedora">Empreendedora</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="investidor" value="investidor">
+                            <label class="form-check-label" for="investidor">Investidor(a)</label>
+                        </div>
+                    </div>
+                    <br/>
 
-          <div class="container mt-5">
-            <div class="form-group">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="empreendedora" id="empreendedora" value="empreendedora" checked>
-                    <label class="form-check-label" for="empreendedora">Empreendedora</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="investidor" id="investidor" value="investidor">
-                    <label class="form-check-label" for="investidor">Investidor(a)</label>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="modal-footer">
-          <a href="" type="button" class="botao-branco">Cancelar</a>
-          <a href="" type="button" class="botao-roxo" >Cadastrar</a>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Concordo com os termos e condições de uso.
+                        </label>
+                        <div class="invalid-feedback">
+                            Você deve concordar com os termos e condições de uso para continuar.
+                        </div>
+                      </div>
+                    <br/>
+
+                <div class="modal-footer">
+                    <a href="" type="button" class="botao-branco">Cancelar</a>
+                    <button class="botao-roxo" type="submit">Cadastrar</button>
+                  </div>
+            </form>
         </div>
       </div>
     </div>
   </div>
+  
+        </div>
+    </div>
+        
 
     <section id="sobre" class="about-me" data-aos="fade-left">
         <div class="container-about-me">
@@ -257,7 +296,51 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-    AOS.init();
+        AOS.init();
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    let isValid = true;
+
+                    // Password validation
+                    if (!form.checkValidity()) {
+                        isValid = false;
+                    }
+
+                    // Birthdate validation
+                    const birthdateInput = form.querySelector('#birthdate');
+                    const birthdateValue = new Date(birthdateInput.value);
+                    const today = new Date();
+                    const age = today.getFullYear() - birthdateValue.getFullYear();
+                    const monthDifference = today.getMonth() - birthdateValue.getMonth();
+                    const dayDifference = today.getDate() - birthdateValue.getDate();
+
+                    if (age < 18 || (age === 18 && (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)))) {
+                        birthdateInput.setCustomValidity('Invalid');
+                        document.getElementById('birthdateError').style.display = 'block';
+                        isValid = false;
+                    } else {
+                        birthdateInput.setCustomValidity('');
+                        document.getElementById('birthdateError').style.display = 'none';
+                    }
+
+                    if (!isValid) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            })
+        })()
 </script>
 
 </html>
