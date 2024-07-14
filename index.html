@@ -40,6 +40,12 @@
         <div class="background-images"></div>
         <div class="container-home">
             <article>
+<<<<<<< HEAD
+=======
+
+                
+                
+>>>>>>> 729ad9431792fe270ec9feea211ad9ac59e18eaf
                 <h1 data-aos="fade-left">Seja uma líder<span>!</span></h1>
                 <p>Junte-se à revolução tecnológica liderada por mulheres</p>
                 <div>
@@ -67,6 +73,7 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
 
     <!-- Modal -->
     <div class="modal fade" id="cadastro" tabindex="-1" aria-labelledby="cadastroLabel" aria-hidden="true">
@@ -100,6 +107,79 @@
             </div>
         </div>
     </div>
+=======
+  
+  <!-- Modal -->
+  <div class="modal fade" id="cadastro" tabindex="-1" aria-labelledby="cadastroLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="cadastroLabel">Cadastre-se </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="row g-3 needs-validation" class="row" novalidate>
+                <div class="col-md-12">
+                    <label for="nome" class="form-label">Nome completo</label>
+                    <input type="text" class="form-control" id="nome" required>
+                    <div class="invalid-feedback">Campo obrigatório.</div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">Campo obrigatório. Email deve conter @.</div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" pattern=".{8,15}" required>
+                    <div class="invalid-feedback">Sua senha deve ter entre 8 e 15 caracteres.</div>
+                  </div>
+
+                 <div class="col-md-6">
+                    <label for="birthdate" class="form-label">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                    <div class="invalid-feedback" id="birthdateError">Campo obrigatório. Você deve ser maior de 18 anos</div>
+                 </div>
+
+                        <div class="form-group" required>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="empreendedora" value="empreendedora" checked>
+                            <label class="form-check-label" for="empreendedora">Empreendedora</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="investidor" value="investidor">
+                            <label class="form-check-label" for="investidor">Investidor(a)</label>
+                        </div>
+                        </div>
+                        <br/>
+
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Concordo com os termos e condições de uso.
+                        </label>
+                        <div class="invalid-feedback">
+                            Você deve concordar com os termos e condições de uso para continuar.
+                        </div>
+                      </div>
+                    <br/>
+
+                <div class="modal-footer">
+                    <a href="" type="button" class="botao-branco">Cancelar</a>
+                    <button class="botao-roxo" type="submit">Cadastrar</button>
+                  </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        </div>
+    </div>
+        
+>>>>>>> 729ad9431792fe270ec9feea211ad9ac59e18eaf
 
     <section id="sobre" class="about-me" data-aos="fade-left">
         <div class="container-about-me">
@@ -244,4 +324,68 @@
     </script>
 </body>
 
+<<<<<<< HEAD
+=======
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script>window.gtranslateSettings = {
+    "default_language": "pt", "languages": ["pt", "en"],
+    "wrapper_selector": ".gtranslate_wrapper", "alt_flags": { "en": "usa", "pt": "brazil" }
+}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+<script src="./js/script.js"></script>
+<script src="./js/sendEmail.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+        AOS.init();
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    let isValid = true;
+
+                    // Password validation
+                    if (!form.checkValidity()) {
+                        isValid = false;
+                    }
+
+                    // Birthdate validation
+                    const birthdateInput = form.querySelector('#birthdate');
+                    const birthdateValue = new Date(birthdateInput.value);
+                    const today = new Date();
+                    const age = today.getFullYear() - birthdateValue.getFullYear();
+                    const monthDifference = today.getMonth() - birthdateValue.getMonth();
+                    const dayDifference = today.getDate() - birthdateValue.getDate();
+
+                    if (age < 18 || (age === 18 && (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)))) {
+                        birthdateInput.setCustomValidity('Invalid');
+                        document.getElementById('birthdateError').style.display = 'block';
+                        isValid = false;
+                    } else {
+                        birthdateInput.setCustomValidity('');
+                        document.getElementById('birthdateError').style.display = 'none';
+                    }
+
+                    if (!isValid) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            })
+        })()
+</script>
+
+>>>>>>> 729ad9431792fe270ec9feea211ad9ac59e18eaf
 </html>

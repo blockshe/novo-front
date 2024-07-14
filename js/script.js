@@ -53,4 +53,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleMoonImage = () => {
         moonImage.src = document.documentElement.classList.contains('dark-mode') ? './assets/icons/light-moon.svg' : './assets/icons/moon.svg';
     };
+
 });
