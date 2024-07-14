@@ -65,4 +65,27 @@ function toggleMoonImage() {
     }
 }
 
+let currentIndex = 0;
+
+function slideRight() {
+  const carousel = document.querySelector('.carousel');
+  const items = document.querySelectorAll('.carousel-item');
+  const itemWidth = items[0].clientWidth + parseInt(getComputedStyle(items[0]).marginRight) * 2;
+
+  if (currentIndex < items.length - 1) {
+    currentIndex++;
+    carousel.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+  }
+}
+
+function slideLeft() {
+  const carousel = document.querySelector('.carousel');
+  const items = document.querySelectorAll('.carousel-item');
+  const itemWidth = items[0].clientWidth + parseInt(getComputedStyle(items[0]).marginRight) * 2;
+
+  if (currentIndex > 0) {
+    currentIndex--;
+    carousel.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+  }
+}
 
