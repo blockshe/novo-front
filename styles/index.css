@@ -611,49 +611,6 @@ header .switch {
   color: var(--white);
 }
 
-.carousel-section {
-  padding: 20px 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: auto; /* Permite que o conteúdo se expanda conforme necessário */
-  max-width: 100%;
-}
-
-.carousel-item {
-  width: 250px;
-  height: 250px;
-  margin: 0 10px;
-  border-radius: 20px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: transparent; 
-  transition: transform 0.5s ease-in-out;
-  opacity: 0.9;
-}
-
-.carousel-container:hover .carousel img {
-  transform: scale(1.1);
-}
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
