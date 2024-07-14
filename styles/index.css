@@ -665,6 +665,81 @@ header .switch {
   color: var(--white);
 }
 
+.login{
+  max-width: 100%;
+  background-color: var(--white);
+  display: flex;
+  place-content: center;
+  margin: 50px;
+  color:var(--black);
+}
+
+.container{ 
+  background-size: cover;
+  width: 1000px;
+  height: 500px;
+  border-radius: 0px 80px 0px 80px;
+  padding: 50px;
+  
+}
+.opcao{
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+.opcao a{
+  color: var(--black)
+  text-decoration: none;
+  font-size: 34px;
+}
+.opcao a:hover{
+  border-bottom: 3px solid var(--yellow)
+  
+}
+
+.informacoes{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+.informacoes h3{
+  font-size: 16px;
+  
+}
+.informacoes input{
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--yellow)
+  outline: none;
+  color: antiquewhite;
+  font-size: 20px;
+}
+
+.btn-login{
+  width: 200px;
+  margin: 20px;
+  height: 41px;
+  border: none;
+  background-color: var(--yellow)
+  border-radius: 10px ;
+}
+
+.btn-login:hover {
+  background-color: var(--yellow);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-login a {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
