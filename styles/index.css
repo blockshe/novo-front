@@ -667,15 +667,14 @@ header .switch {
 
 .login{
   max-width: 100%;
-  background-color: #1E1E1E;
+  background-color: var(--white);
   display: flex;
   place-content: center;
   margin: 50px;
-  color:aliceblue;
+  color:var(--black);
 }
 
-.container{
-  background-image:url(../img/desfoco.jpg)  ;  
+.container{ 
   background-size: cover;
   width: 1000px;
   height: 500px;
@@ -690,12 +689,12 @@ header .switch {
   font-family: 'Pixelify Sans', sans-serif;
 }
 .opcao a{
-  color: aliceblue;
+  color: var(--black)
   text-decoration: none;
   font-size: 34px;
 }
 .opcao a:hover{
-  border-bottom: 3px solid #06AF0D;
+  border-bottom: 3px solid var(--yellow)
   
 }
 
@@ -713,11 +712,10 @@ header .switch {
 .informacoes input{
   background: transparent;
   border: none;
-  border-bottom: 2px solid aliceblue;
+  border-bottom: 2px solid var(--yellow)
   outline: none;
-  color:antiquewhite;
+  color: antiquewhite;
   font-size: 20px;
-  
 }
 
 .btn-login{
@@ -725,19 +723,22 @@ header .switch {
   margin: 20px;
   height: 41px;
   border: none;
-  background-color: #06AF0D;
+  background-color: var(--yellow)
   border-radius: 10px ;
 }
-.btn-login:hover{
-  background-color:#0ae911;
-  transition: 0.3s;
-  box-shadow: 0 0 20px 0;
+
+.btn-login:hover {
+  background-color: var(--yellow);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
-.btn-login a{
-  color: aliceblue;
- text-decoration: none; 
- font-size: 16px;
+
+.btn-login a {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 16px;
 }
+
 
 @keyframes fadeOut {
   0% {
